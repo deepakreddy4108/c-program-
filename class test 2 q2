@@ -1,0 +1,28 @@
+#include<stdio.h>
+science= float(input("Enter the marks in Science: "))
+history = float(input("Enter the marks in History: "))
+maths = float(input("Enter the marks in Mathematics: "))
+language = float(input("Enter the marks in Language: "))
+
+calculate the total and aggregate
+total = science + history + maths + language
+aggregate = total / 4
+
+determine the grade obtained by the student
+if aggregate >= 75:
+    grade = "Distinction"
+    if science >= 50 and history >= 50 and maths >= 50 and language >= 50:
+    grade += " with All Pass"
+elif aggregate >= 60:
+    grade = "First Class"
+    if science >= 50 and history >= 50 and maths >= 50 and language >= 50:
+    grade += " with All Pass"
+elif aggregate >= 50:
+    grade = "Reappear"
+else:
+    grade = "Fail"
+
+display the results
+print("Total =", total)
+print("Aggregate =", aggregate)
+print("Grade =", grade)
