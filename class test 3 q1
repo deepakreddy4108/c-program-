@@ -1,0 +1,42 @@
+#include <stdio.h>
+// Function to reverse a number
+int reverse(int num) 
+{
+    int rev = 0;
+    while (num != 0) 
+{
+    rev = rev * 10 + num % 10;
+    num /= 10;
+  }
+    return rev;
+}
+    // Function to find the nth number in the Fibonacci series
+    int fibonacci(int num)
+ {
+    if (num <= 1) 
+{
+    return num;
+  }
+    return fibonacci(num - 1) + fibonacci(num - 2);
+}
+    int main() 
+	{
+    int num, rev, fib;
+    // Read the input number
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    // Reverse the number
+    rev = reverse(num); 
+    // Print the reversed number
+    printf("Reversed number: %d\n", rev);
+    // Find the Fibonacci series of the number
+    fib = fibonacci(num);
+    // Print the Fibonacci series
+    printf("Fibonacci series of %d: ", num);
+    for (int i = 0; i <= fib; i++)
+ {
+    printf("%d ", fibonacci(i));
+}
+    printf("\n");
+    return 0;
+}
