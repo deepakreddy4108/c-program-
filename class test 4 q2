@@ -1,0 +1,21 @@
+#include<stdio.h>
+ int the list of names from the user
+names = input("Enter the list of names separated by spaces: ").split()
+
+ int the sorting order from the user
+order = input("Enter the sorting order (A for Ascending, D for Descending): ")
+
+Sort the list in ascending order
+if order.lower() == 'a':
+    names.sort()
+Sort the list in descending order
+elif order.lower() == 'd':
+    names.sort(reverse=True)
+else:
+    print("Invalid sorting order. Please try again.")
+    exit()
+
+Print the sorted list of names
+print("Sorted list of names:")
+for name in names:
+    print(name, end=" ")
